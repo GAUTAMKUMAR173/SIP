@@ -859,4 +859,307 @@ footer .follow i:hover,footer a{
     font-size: 14px;
     transition: 0.2s;
 }
+#form-details form input:focus,
+#form-details form textarea:focus {
+    border-color: #088178;
+    box-shadow: 0 0 0 3px rgba(8, 129, 120, 0.15);
+}
+
+/* Rounded Best Pill Button */
+#form-details form button.normal {
+    background-color: #088178;
+    color: #fff;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 30px; /* Perfectly circle curve button */
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    transition: 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+#form-details form button.normal:hover {
+    background-color: #06655e;
+    transform: translateY(-2px); /* Premium float effect */
+}
+
+/* Staff Members List */
+#form-details .people {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+#form-details .people div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#form-details .people div img {
+    width: 65px;
+    height: 65px;
+    object-fit: cover;
+    border-radius: 50%; /* Circle Profile Pictures */
+    border: 2px solid #e2f2f0;
+}
+
+#form-details .people div p {
+    margin: 0;
+    font-size: 13px;
+    color: #64748b;
+    line-height: 20px;
+}
+
+#form-details .people div p span {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    color: #0f172a;
+}
+
+/* Responsive Style Mobile ke liye */
+@media (max-width: 768px) {
+    #contact-details, #form-details {
+        flex-direction: column;
+        padding: 20px;
+    }
+    #contact-details .details, #contact-details .map,
+    #form-details form, #form-details .people {
+        width: 100%;
+    }
+    #contact-details .map {
+        height: 300px;
+    }
+}
+
+
+
+
+
+  /* ==========================================
+   1. GLOBAL & CONTAINER STYLES
+   ========================================== */
+.section-p1 {
+    padding: 40px 80px;
+}
+
+#cart {
+    margin: 20px 0;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03); /* Soft premium shadow */
+}
+
+/* ==========================================
+   2. TABLE GENERAL STYLES
+   ========================================== */
+#cart table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    table-layout: fixed; 
+    white-space: nowrap; 
+} 
+
+/* Column Alignment & Width Control */
+#cart table td:nth-child(1) { width: 80px; text-align: center; } 
+#cart table td:nth-child(2) { width: 120px; text-align: center; } 
+#cart table td:nth-child(3) { width: 250px; text-align: left; padding-left: 10px; }
+#cart table td:nth-child(4), 
+#cart table td:nth-child(5), 
+#cart table td:nth-child(6) { width: 130px; text-align: center; } 
+
+/* ==========================================
+   3. TABLE HEADER (THEAD) STYLING
+   ========================================== */
+#cart table thead { 
+    background-color: #f9fbfb; /* Light subtle background */
+    border-top: 1px solid #e2f2f0; 
+    border-bottom: 2px solid #088178; /* Main brand color ki premium line */
+} 
+#cart table thead th,
+#cart table thead td { 
+    font-weight: 700; 
+    text-transform: uppercase; 
+    font-size: 12px; 
+    letter-spacing: 1px; /* Premium spacing */
+    padding: 18px 0; 
+    color: #0f172a;
+    border: none;
+
+} 
+
+/* ==========================================
+   4. TABLE BODY (TBODY) STYLING
+   ========================================== */
+#cart table tbody tr {
+    border-bottom: 1px solid #f1f5f5; 
+    transition: background-color 0.2s ease; /* Hover effect */
+}
+
+#cart table tbody tr:hover {
+    background-color: #fbfdfd; /* Row par mouse le jaane par change hoga */
+}
+
+#cart table tbody td { 
+    padding: 20px 0; 
+    font-size: 14px; 
+    color: #4a5568; /* Elegant soft dark gray */
+    vertical-align: middle;
+} 
+
+/* Product Image Styling */
+#cart table img { 
+    width: 75px; 
+    height: 75px;
+    object-fit: cover; 
+    border-radius: 6px;
+    border: 1px solid #e2e8f0;
+    transition: transform 0.2s ease;
+} 
+
+#cart table tbody tr:hover img {
+    transform: scale(1.03); /* Subtle image zoom on hover */
+}
+
+/* Quantity Input Field Styling */
+#cart table td:nth-child(5) input { 
+    width: 60px; 
+    padding: 8px 5px 8px 10px; 
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    outline: none;
+    text-align: center;
+    font-weight: 600;
+    color: #334155;
+    transition: 0.2s;
+} 
+
+#cart table td:nth-child(5) input:focus {
+    border-color: #088178; /* Focus hone par brand color border */
+    box-shadow: 0 0 0 3px rgba(8, 129, 120, 0.15);
+}
+
+/* Remove Icon (X) Action Button */
+#cart table tbody td:nth-child(1) a {
+    color: #94a3b8; /* Normal grid par standard gray */
+    font-size: 18px;
+    transition: all 0.2s ease;
+}
+
+#cart table tbody td:nth-child(1) a:hover {
+    color: #ef4444; /* Clean coral red color */
+    transform: scale(1.15);
+    display: inline-block;
+}
+
+/* Subtotal Price Bold Highlight */
+#cart table tbody td:nth-child(6) {
+    font-weight: 600;
+    color: #0f172a;
+}
+
+/* ==========================================
+   5. COUPON & TOTAL LAYOUT SECTION
+   ========================================== */
+#cart-add { 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+/* ==========================================
+   6. RESPONSIVE DESIGN (MOBILE READY)
+   ========================================== */
+@media (max-width: 991px) {
+    .section-p1 { padding: 30px 40px; }
+}
+
+@media (max-width: 768px) {
+    .section-p1 { padding: 20px; }
+    #cart {
+        overflow-x: auto; /* Small screens par beautiful scrollable table */
+        border: 1px solid #e2e8f0;
+    }
+}
+
+
+
+
+
+
+
+/* =============================
+1.total add-cart information
+================================*/
+
+#cart-add{
+  display: flex;
+flex-wrap: wrap;
+  justify-content: space-between;
+  
+}
+#coupon {
+
+  width: 40%;
+  margin-bottom: 30px;
+
+}
+#coupon h3,
+#subtotal h3{
+  padding-bottom: 15px;
+
+}
+#coupon input{
+  padding: 10px 20px;
+  outline: none;
+  width: 60%;
+  margin-right: 10px;
+  border: 1px solid #c2e9e1;
+  
+}
+
+#coupon button,
+#subtotal button {
+  background-color: #088178;
+
+    color: #fff;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 30px; /* Perfectly circle curve button */
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 10px;
+    transition: 0.3s ease;
+    letter-spacing: 0.5px;
+}
+#subtotal{
+  width: 50%;
+  margin-bottom: 30px;
+  border: 1px solid #c2e9e1;
+  padding: 30px;
+}
+
+#subtotal table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+#subtotal table td {
+  width: 50%;
+  border: 1px solid #c2e9e1;
+  font-size: 13px;
+  padding: 10px;
+}
+
+
+
+
+
+
 
